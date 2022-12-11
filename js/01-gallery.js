@@ -38,7 +38,7 @@ function showLargeImgOnClick(event) {
     <img width="1400" height="1400" src="${event.target.dataset.source}">
 `
   );
-
+  modal.show();
   document.addEventListener("keydown", onKeyPress);
 
   function onKeyPress(event) {
@@ -46,7 +46,7 @@ function showLargeImgOnClick(event) {
       return;
     } else {
       modal.close();
-      galleryContaiter.removeEventListener("keydown", showLargeImgOnClick);
+      document.removeEventListener("keydown", onKeyPress);
     }
   }
 }
