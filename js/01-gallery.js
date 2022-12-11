@@ -39,7 +39,6 @@ function showLargeImgOnClick(event) {
 `
   );
 
-
   document.addEventListener("keydown", onKeyPress);
 
   function onKeyPress(event) {
@@ -49,31 +48,5 @@ function showLargeImgOnClick(event) {
       modal.close();
       galleryContaiter.removeEventListener("keydown", showLargeImgOnClick);
     }
- 
   }
 }
-
-// const onGalleryImgClick = (event) => {
-//   event.preventDefault();
-//   if (event.target.nodeName !== "IMG") {
-//     return;
-//   }
-//   const carousel = basicLightbox.create(
-//     `      <img src="${event.target.dataset.source}" width="800" height="600">  `,
-//     {
-//       onShow: (carousel) => {
-//         document.addEventListener("keydown", onEscapeKeyDown);
-//       },
-//       onClose: (carousel) => {
-//         document.removeEventListener("keydown", onEscapeKeyDown);
-//       },
-//     }
-//   );
-//   carousel.show();
-//   function onEscapeKeyDown(event) {
-//     if (event.code !== "Escape") {
-//       return;
-//     }
-//     carousel.close();
-//   }
-// };
